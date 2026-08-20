@@ -883,6 +883,48 @@
     </div>
   </footer>
 
+  <!-- Search Overlay Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-container">
+      <form class="search-form" id="searchForm">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for pizzas, burgers, drinks..." required>
+        <button type="submit" class="btn btn-primary search-submit-btn">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cart Drawer Overlay -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+
+  <!-- Slide-out Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <h3>Your Cart (<span id="cartCountHeader">0</span>)</h3>
+      <button class="cart-drawer-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    
+    <div class="cart-drawer-items" id="cartItemsContainer">
+      <div class="cart-empty-message">
+        <span class="cart-empty-icon">🛒</span>
+        <p>Your cart is empty</p>
+        <a href="#menu" class="btn btn-primary btn-sm" id="shopNowBtn">Shop Now</a>
+      </div>
+    </div>
+    
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+
   <!-- JavaScript -->
   <script src="main.js"></script>
 </body>
