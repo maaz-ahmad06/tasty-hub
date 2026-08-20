@@ -894,6 +894,12 @@ button {
   transition-delay: calc(var(--delay, 0) * 0.15s);
 }
 
+.scroll-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 /* ==========================================================================
    MENU / POPULAR DISHES SECTION
