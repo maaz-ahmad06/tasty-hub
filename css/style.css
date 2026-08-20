@@ -1402,6 +1402,265 @@ button {
   font-size: 1.3rem;
 }
 
+
+/* ==========================================================================
+   TESTIMONIALS SECTION
+   ========================================================================== */
+.testimonials-section {
+  padding: var(--space-xxl) 0;
+  background-color: var(--bg-cream); /* Alternating section background color */
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.testimonials-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.testimonial-card {
+  background-color: var(--bg-white);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(229, 62, 33, 0.1);
+}
+
+.testimonial-quote {
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-text {
+  font-size: 0.98rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  font-style: italic;
+  flex-grow: 1;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-md);
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--border-light);
+  padding-top: var(--space-md);
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--border-light);
+}
+
+.testimonial-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   APP DOWNLOAD / NEWSLETTER CTA BANNER SECTION
+   ========================================================================== */
+.cta-section {
+  position: relative;
+  padding: var(--space-xxl) 0;
+  background-image: url('../assets/parallax-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Parallax effect */
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 10, 8, 0.72); /* Dark warm overlay masking the background */
+  z-index: 1;
+}
+
+.cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xxl);
+  position: relative;
+  z-index: 2; /* Sit on top of overlay */
+}
+
+.cta-box {
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: var(--space-xxl) var(--space-xl);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--white);
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cta-box:hover {
+  border-color: rgba(229, 62, 33, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.cta-subtitle {
+  display: block;
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-xs);
+}
+
+.cta-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: var(--space-sm);
+  color: var(--white);
+}
+
+.cta-desc {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+/* App store download buttons */
+.app-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--white);
+  color: var(--text-dark);
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-smooth);
+  border: 1px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.app-btn:hover {
+  background-color: transparent;
+  color: var(--white);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.app-btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.app-btn-sub {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.app-btn-main {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  gap: var(--space-xs);
+}
+
+.newsletter-input {
+  flex-grow: 1;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.8rem var(--space-md);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-input:focus {
+  border-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-submit-btn {
+  border-radius: var(--radius-full);
+  padding: 0 1.6rem;
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
@@ -1522,6 +1781,21 @@ button {
 
   .badge-satisfaction {
     right: 0px;
+  }
+
+  /* Testimonials & CTA tablet overrides */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+    gap: var(--space-lg);
+  }
+
+  .cta-container {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+    gap: var(--space-xl);
   }
 }
 
@@ -1670,6 +1944,37 @@ button {
   .badge-satisfaction {
     display: none; /* Hide overlay badges on small mobile widths */
   }
+
+  /* Testimonials & CTA mobile overrides */
+  .testimonials-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .cta-section {
+    padding: var(--space-xl) 0;
+    background-attachment: scroll; /* Fallback for mobile parallax scrolling performance */
+  }
+
+  .cta-box {
+    padding: var(--space-xl) var(--space-md);
+    align-items: center;
+    text-align: center;
+  }
+
+  .app-buttons {
+    justify-content: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .newsletter-submit-btn {
+    width: 100%;
+    padding: 0.8rem 0;
+  }
 }
 
 /* Tiny Screens (under 480px) */
@@ -1727,6 +2032,16 @@ button {
   }
 
   .stat-number {
+    transition: none !important;
+  }
+
+  .cta-section {
+    background-attachment: scroll !important;
+  }
+
+  .cta-box,
+  .testimonial-card {
+    transform: none !important;
     transition: none !important;
   }
 }
